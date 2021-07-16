@@ -10,8 +10,5 @@
     %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
   %body
     = render 'layouts/navbar'
-    %p.notice 
-      = notice
-    %p.alert 
-      = alert
+    = render 'layouts/flash_messages'
     = yield

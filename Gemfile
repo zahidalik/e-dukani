@@ -56,3 +56,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # My gems
 gem "haml-rails", "~> 2.0"
 gem 'devise'
+gem 'simple_form'
