@@ -1,0 +1,14 @@
+- if user_signed_in?
+  .row
+    .col.s3
+      %ul.collection.with-header
+        %li.collection-header
+          Welcome
+          = @user.full_name
+        %li.collection-item
+          = link_to new_product_path do
+            %i.material-icons.left new_label
+            Register New Product
+    .col.s9
+      
+   

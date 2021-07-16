@@ -1,0 +1,15 @@
+= simple_form_for @product do |f|
+  = f.error_notification
+  = f.input :item_name
+  = f.input :available
+  = f.label :description
+  = f.rich_text_area :description
+  .card.cyan.lighten-5
+    .card-content
+      .card-title.center-align.teal-text.darken-3 Images
+      = f.file_field :image
+      = f.file_field :image
+      = f.file_field :image
+      = f.file_field :image
+      = f.file_field :image
+  = f.button :submit
