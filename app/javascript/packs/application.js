@@ -18,3 +18,5 @@ require("channels")
 
 import 'stylesheets/application'
 import 'materialize-css/dist/js/materialize'
+require("trix")
+require("@rails/actiontext")
