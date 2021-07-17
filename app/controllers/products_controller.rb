@@ -12,14 +12,20 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(:product_params)
+    @product = Product.new(product_params)
 
     if @product.save
-      Product.sms_alert
-      flash[:alert] = "Please check the sms send to your mobile number"
+      @product.sms_alert
+      flash[:notice] = "Please check the sms send to your mobile number"
       redirect_to root_path
     else
       render 'new'
     end
+  end
+
+  private
+
+  def product_params
+    params.require(:product).permit(:item_name, :price, :available, :description)
   end
 end

@@ -3,5 +3,6 @@ class HomeController < ApplicationController
   
   def welcome
     @user = current_user
+    @products = Product.all.limit(3)
   end
 end

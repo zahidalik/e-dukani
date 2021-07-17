@@ -2,14 +2,11 @@
   = f.error_notification
   = f.input :item_name
   = f.input :available
+  = f.input :price
   = f.label :description
   = f.rich_text_area :description
   .card.cyan.lighten-5
     .card-content
       .card-title.center-align.teal-text.darken-3 Images
-      = f.file_field :image
-      = f.file_field :image
-      = f.file_field :image
-      = f.file_field :image
-      = f.file_field :image
+      = f.file_field :images, multiple: true, direct_upload: true
   = f.button :submit

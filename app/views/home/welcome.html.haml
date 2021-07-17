@@ -10,5 +10,9 @@
             %i.material-icons.left new_label
             Register New Product
     .col.s9
+      %ul 
+        - @products.each do |product|
+          %li
+            = product.item_name
       
    
